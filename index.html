@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Proyecto Final JS Martin Sanchez</title>
+  </head>
+  <body>
+    <div id="titulo">
+      <h1>Calculadora de ritmo</h1>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li>
+          <a href="#subCalculadora">Calculadora</a>
+        </li>
+        <li>
+          <a href="#subIniciacion"> Iniciacion</a>
+        </li>
+        <li>
+          <a href="#subPlan"> Plan de Entrenamiento</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Calculadora -->
+    <section class="calculadora">
+      <div id="subCalculadora">
+        <h2>Calculadora</h2>
+      </div>
+      <p>
+        Podremos conocer el tiempo o ritmo de tu carrera para generar una
+        estrategia.
+      </p>
+      <button id="btnTiempo">TIEMPO</button>
+      <button id="btnRitmo">RITMO</button>
+      <form id="formCalculadora">
+        <div id="btnInputs"></div>
+      </form>
+      <div class="reloj">
+        <legend class="meta">Llegada</legend>
+        <label for="horas">Horas</label>
+        <input id="horas" type="text" />
+        <label for="minutos">Minutos</label>
+        <input id="minutos" type="text" />
+        <label for="segundos">Segundos</label>
+        <input id="segundos" type="text" />
+        <legend id="objetivosCalculadora"></legend>
+      </div>
+    </section>
+    <!-- Iniciacion -->
+    <section id="iniciacion">
+      <div id="subIniciacion">
+        <h2>Iniciacion</h2>
+      </div>
+      <p>Comienza con tu entrenamiento eligiendo tu objetivo.</p>
+      <form id="formIniciacion">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" />
+        <label for="edad">Edad</label>
+        <input type="text" id="edad" />
+        <label for="experiencia">Experiencia</label>
+        <input type="text" id="experiencia" />
+        <label for="altura">Altura</label>
+        <input type="number" id="altura" />
+        <label for="peso">Peso</label>
+        <input type="number" id="peso" />
+        <button id="comenzar" type="submit">Comenzar</button>
+      </form>
+      <div id="btnIniciacion">
+        <h3>Elige un objetivo</h3>
+        <button id="km10" class="btnObjetivo">10 km</button>
+        <button id="km15" class="btnObjetivo">15 km</button>
+        <button id="km21" class="btnObjetivo">21 km</button>
+        <button id="km30" class="btnObjetivo">30 km</button>
+        <button id="km42" class="btnObjetivo">42 km</button>
+      </div>
+    </section>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

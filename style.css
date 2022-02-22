@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #7eb3f0;
+  color: black;
+  margin: 3rem;
+  font-size: 1.5rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Navbar */
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.nav li {
+  display: inline;
+}
+.nav a {
+  text-decoration: none;
+  color: #043604;
+}
+
+/* ------------------------------------------- */
+/* Calculadora */
+.calculadora {
+  margin-top: 1rem;
+}
+
+#tiempo-ritmo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: oblique;
+}
+
+#objetivosCalculadora p {
+  width: 2rem;
+  font-size: 1.5rem;
+  display: inline;
+}
+
+.calculadora input {
+  font-size: 1.2rem;
+  width: 2rem;
+  background: none;
+}
+
+button {
+  font-size: 1.2rem;
+  width: 7rem;
+  background: none;
+}
+
+.distancia input {
+  width: 5rem;
+}
+
+.ritmo input {
+  width: 5rem;
+}
+
+.tiempo input {
+  width: 5rem;
+}
+
+.btnCalcular input {
+  width: 5rem;
+}
+
+.meta {
+  font-size: 2rem;
+}
+.reloj {
+  margin-top: 2rem;
+}
+/* ------------------------------------- */
+
+#iniciacion {
+  margin-top: 2rem;
+}
+#iniciacion h2 {
+  padding-bottom: 1rem;
+}
+#iniciacion input {
+  font-size: 1.2rem;
+  width: 6rem;
+  background: none;
+  text-transform: uppercase;
+}
+
+#btnIniciacion {
+  display: none;
+  /* background-color: green; */
+}
+
+.validarSi {
+  background-color: green;
+  color: white;
+}
+.validarNo {
+  background-color: red;
+  color: white;
+}
