@@ -37,7 +37,7 @@ objetivoTiempo.onclick = () => {
       document.querySelector("#distanciaInput").value * 1000;
     const ritmoValue = document.querySelector("#ritmoInput").value;
     const resultado = Math.ceil((distanciaValue / 1000) * ritmoValue);
-    // formCalculadora.reset();
+    formCalculadora.reset();
 
     // Resultado de los Inputs a Reloj
     if (resultado >= 60) {
@@ -48,6 +48,8 @@ objetivoTiempo.onclick = () => {
       segundos = 0;
 
       // DOM Reloj
+      const metas = document.querySelector("#metas");
+      metas.innerHTML = `${distanciaValue / 1000}km en ${ritmoValue}min/km`;
       document.querySelector("#horas").value = `${horas}`;
       document.querySelector("#minutos").value = `${minutos}`;
       document.querySelector("#segundos").value = `${segundos}`;
@@ -61,9 +63,10 @@ objetivoTiempo.onclick = () => {
 
 // Variable btn Ritmo
 const objetivoRitmo = document.querySelector("#btnRitmo");
-objetivoRitmo.onclick = () => {
+objetivoRitmo.onclick = (evt) => {
+  evt.preventDefault();
   // Color Verde
-  objetivoRitmo.classList.add("valivalidarSi");
+  objetivoRitmo.classList.add("validarSi");
   // DOM Inputs Distancia y Ritmo con Create Element/Class Name/InnerHTML/appendchild
   const distancia = document.createElement(`div`);
   const tiempo = document.createElement(`div`);
@@ -84,7 +87,7 @@ objetivoRitmo.onclick = () => {
     evt.preventDefault();
     const distanciaValue = document.querySelector(`#distancia`).value;
     const tiempoValue = document.querySelector(`#tiempo`).value * 60;
-    // formCalculadora.reset();
+    formCalculadora.reset();
 
     // Resultado de los Inputs a Reloj
     const resultado = tiempoValue / distanciaValue;
@@ -94,6 +97,8 @@ objetivoRitmo.onclick = () => {
     horas = 0;
 
     // DOM Reloj
+    const metas = document.querySelector("#metas");
+    metas.innerHTML = `${distanciaValue}km en ${tiempoValue / 60}hs.`;
     document.querySelector("#horas").value = `${horas}`;
     document.querySelector("#minutos").value = `${minutos}`;
     document.querySelector("#segundos").value = `${segundos}`;
@@ -103,23 +108,17 @@ objetivoRitmo.onclick = () => {
 };
 // Usuario
 class Corredores {
-  constructor(nombre, edad, experiencia, altura, peso, objetivo, meta) {
+  constructor(nombre, edad, experiencia) {
     (this.nombre = nombre),
       (this.edad = edad),
-      (this.experiencia = experiencia),
-      (this.altura = altura),
-      (this.peso = peso),
-      (this.objetivo = objetivo),
-      (this.meta = meta);
+      (this.experiencia = experiencia);
   }
 }
 
 const usuario = new Corredores(
   document.querySelector("#nombre").value,
   document.querySelector("#edad").value,
-  document.querySelector("#experiencia").value,
-  document.querySelector("#altura").value,
-  document.querySelector("#peso").value
+  document.querySelector("#experiencia").value
 );
 
 // Formulario Iniciacion
@@ -129,7 +128,7 @@ formIniciacion.addEventListener("submit", (evt) => {
   // DOM Btns Objetivo
   document.querySelector("#btnIniciacion").style.display = "block";
   // Validar experiencia SI
-  const btnObjetivo = document.querySelectorAll(".btnObjetivo");
+  let btnObjetivo = document.querySelectorAll(".btnObjetivo");
   if (experiencia.value === "si") {
     for (let i = 0; i < btnObjetivo.length; i += 1) {
       btnObjetivo[i].classList.add("validarSi");
@@ -137,13 +136,13 @@ formIniciacion.addEventListener("submit", (evt) => {
     // Validar experiencia NO
   } else {
     if (edad.value <= 30) {
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 3; i += 1) {
         btnObjetivo[i].classList.add("validarSi");
         btnObjetivo[3].classList.add("validarNo");
         btnObjetivo[4].classList.add("validarNo");
       }
     } else {
-      for (let i = 0; i < 2; i++) {
+      for (let i = 0; i < 2; i += 1) {
         btnObjetivo[i].classList.add("validarSi");
         btnObjetivo[2].classList.add("validarNo");
         btnObjetivo[3].classList.add("validarNo");
@@ -151,47 +150,38 @@ formIniciacion.addEventListener("submit", (evt) => {
       }
     }
   }
+  // Local Storage
+  const usuarioDatos = new FormData(formIniciacion);
+  localStorage.setItem("nombre", usuarioDatos.get("nombre"));
+  localStorage.setItem("edad", usuarioDatos.get("edad"));
+  localStorage.setItem("experiencia", usuarioDatos.get("experiencia"));
 });
 // Eleccion del objetivo a Plan de Entrenamiento
 const btnIniciacion = document.querySelector("#btnIniciacion");
-const objetivo = (evt) => {
+function objetivo(evt) {
   evt.preventDefault();
-  console.log(evt.target);
-};
+  const usuarioObj = evt.target.id;
+  // Local Storage
+  localStorage.setItem("objetivo", usuarioObj);
+  console.log(usuarioObj);
+
+  // Intento para que validarNO devuelva un "falta experiencia"
+  let consultaValidar = document.querySelectorAll(".btnObjetivo");
+  const arrayValidar = Array.from(consultaValidar);
+  const validarNo = arrayValidar.filter((node) => {
+    if (node.classList[1] === "validarNo") {
+      return true;
+    }
+    return false;
+  });
+  console.log(validarNo);
+  if (usuarioObj == validarNo) {
+    console.log("falta experiencia");
+  } else {
+    window.location.href = "./10km.html";
+  }
+}
+
 btnIniciacion.addEventListener("click", objetivo);
-console.log(btnIniciacion);
 
-// const distancias = [
-//   { km: 10, semana: 8 },
-//   { km: 15, semana: 12 },
-//   { km: 21, semana: 16 },
-//   { km: 30, semana: 20 },
-//   { km: 42, semana: 24 },
-// ];
-
-// const plan = parseInt(
-//   prompt("Elige un plan de entrenamiento de 10, 15, 21, 30 o 42 kilomentos")
-// );
-
-// const planElegido = distancias.find((item) => item.km === plan);
-
-// document.write(
-//   `Tu plan de entrenamiento es ${planElegido.km} km - ${planElegido.semana} semanas<br>`
-// );
-
-// if (plan === 10) {
-//   document.write(`Comienza tu entrenamiento!`);
-// } else {
-//   const planMetas = distancias.filter((item) => item.km < plan);
-//   document.write(`Tus objetivos a cumplir son:<br>`);
-//   for (const item of planMetas) {
-//     document.write(`-  ${item.km} km - ${item.semana} semanas<br>`);
-//   }
-
-//   const acumular = (acumulador, item) => acumulador + item.km;
-//   const objetivoKm = planMetas.reduce(acumular, 0);
-
-//   document.write(
-//     `El total de km antes de cumplir tu plan es de ${objetivoKm} km. <br>`
-//   );
-// }
+// incorporar un array
