@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #7eb3f0;
+  color: black;
+  margin: 3rem;
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-style: oblique;
+}
+
+td {
+  padding: 1rem;
+}
+td input {
+  margin: 1rem;
+}
+td input[type="checkbox"] {
+  height: 2rem;
+  width: 2rem;
+}
+
+/* Tabla */
+
+.datatable {
+  border-collapse: collapse;
+  width: 100%;
+}
+.semana1,
+.semana2 {
+  background-color: #281ead;
+  color: white;
+}
+
+.semana3,
+.semana4 {
+  background-color: #aa9901;
+  color: white;
+}
+
+.semana5,
+.semana6 {
+  background-color: #92071e;
+  color: white;
+}
+
+.semana7,
+.semana8 {
+  background-color: #047413;
+  color: white;
+}
+
+/* Carousel */
+
+.carousel_contenedor {
+  position: relative;
+  background-color: #b4e0f1;
+  border-radius: 2rem;
+  margin-top: 2rem;
+}
+
+.carousel_anterior,
+.carousel_siguiente {
+  position: absolute;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  top: calc(50% - 3rem);
+  cursor: pointer;
+  line-height: 2rem;
+  text-align: center;
+  background: none;
+  color: black;
+}
+
+.carousel_anterior:hover,
+.carousel_siguiente:hover {
+  opacity: 0.5;
+}
+
+.carousel_anterior {
+  left: -2rem;
+}
+.carousel_siguiente {
+  right: -2rem;
+}
+
+.carousel_lista {
+  overflow: hidden;
+  padding-top: 2rem;
+}
+
+.carousel_elemento {
+  margin: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #b4e0f1;
+}
+
+.carousel_elemento label {
+  font-size: 2rem;
+  font-style: oblique;
+  background-color: black;
+  color: #7eb3f0;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+.carousel_elemento img {
+  margin-top: 2.5rem;
+}
+
+.carousel_elemento p {
+  background-color: black;
+  color: #7eb3f0;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+.carousel_elemento p:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.carousel_elemento a {
+  margin-top: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.carga {
+  background-color: #281ead;
+}
+.resistencia {
+  background-color: #aa9901;
+}
+.fuerza {
+  background-color: #92071e;
+}
+
+.carousel_indicadores .glider-dot {
+  display: block;
+  width: 2rem;
+  height: 0.5rem;
+  background: black;
+  border-radius: 0;
+}
+
+.carousel_indicadores .glider-dot:hover {
+  opacity: 0.5;
+}
+.carousel_indicadores .glider-dot:active {
+  opacity: 3;
+}

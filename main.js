@@ -14,6 +14,7 @@ const btnCalcular = document.createElement("div");
 const objetivoTiempo = document.querySelector("#btnTiempo");
 // Evento del btn TIempo
 objetivoTiempo.onclick = () => {
+  btnInputs.innerHTML = "";
   // Color Verde
   objetivoTiempo.classList.add("validarSi");
   // DOM Inputs Distancia y Ritmo con Create Element/Class Name/InnerHTML/appendchild
@@ -165,21 +166,22 @@ function objetivo(evt) {
   localStorage.setItem("objetivo", usuarioObj);
   console.log(usuarioObj);
 
-  // Intento para que validarNO devuelva un "falta experiencia"
+  // Direccionamiento al html del plan
   let consultaValidar = document.querySelectorAll(".btnObjetivo");
   const arrayValidar = Array.from(consultaValidar);
-  const validarNo = arrayValidar.filter((node) => {
-    if (node.classList[1] === "validarNo") {
-      return true;
-    }
-    return false;
-  });
+  const validarNo = arrayValidar.find((item) => item.id == usuarioObj);
   console.log(validarNo);
-  if (usuarioObj == validarNo) {
-    console.log("falta experiencia");
-  } else {
-    window.location.href = "./10km.html";
-  }
+  validarNo.classList.contains("validarNo")
+    ? console.log("falta experiencia")
+    : usuarioObj === "10km"
+    ? location.assign("./10km.html")
+    : usuarioObj === "15km"
+    ? location.assign("./planes/15km.html")
+    : usuarioObj === "21km"
+    ? location.assign("./planes/21km.html")
+    : usuarioObj === "30km"
+    ? location.assign("./planes/30km.html")
+    : usuarioObj === "42km" && location.assign("./planes/42km.html");
 }
 
 btnIniciacion.addEventListener("click", objetivo);
