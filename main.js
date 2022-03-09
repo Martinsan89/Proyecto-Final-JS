@@ -9,7 +9,6 @@ const btnInputs = document.querySelector("#btnInputs");
 const btnCalcular = document.createElement("div");
 
 // Proceso Btn Tiempo
-
 // Variable btn Tiempo
 const objetivoTiempo = document.querySelector("#btnTiempo");
 // Evento del btn TIempo
@@ -38,12 +37,10 @@ objetivoTiempo.onclick = () => {
       document.querySelector("#distanciaInput").value * 1000;
     const ritmoValue = document.querySelector("#ritmoInput").value;
     const resultado = Math.ceil((distanciaValue / 1000) * ritmoValue);
-    formCalculadora.reset();
 
     // Resultado de los Inputs a Reloj
     if (resultado >= 60) {
       horas = Math.floor(resultado / 60);
-      console.log(horas);
       let restante = horas * 60;
       minutos = resultado - restante;
       segundos = 0;
@@ -55,6 +52,7 @@ objetivoTiempo.onclick = () => {
       document.querySelector("#minutos").value = `${minutos}`;
       document.querySelector("#segundos").value = `${segundos}`;
 
+      formCalculadora.reset();
       return resultado;
     }
   });
@@ -64,8 +62,8 @@ objetivoTiempo.onclick = () => {
 
 // Variable btn Ritmo
 const objetivoRitmo = document.querySelector("#btnRitmo");
-objetivoRitmo.onclick = (evt) => {
-  evt.preventDefault();
+objetivoRitmo.onclick = () => {
+  btnInputs.innerHTML = "";
   // Color Verde
   objetivoRitmo.classList.add("validarSi");
   // DOM Inputs Distancia y Ritmo con Create Element/Class Name/InnerHTML/appendchild
@@ -75,8 +73,8 @@ objetivoRitmo.onclick = (evt) => {
   tiempo.className = "tiempo";
   btnCalcular.className = "btnCalcular";
   distancia.innerHTML = `<label for= "distancia">Distancia en Km</label>
-  <input id="distancia" type="text">`;
-  tiempo.innerHTML = `<label for= "tiempo">Tiempo en hs</label><input id="tiempo" type="text"> `;
+  <input id="distanciaInput" type="text">`;
+  tiempo.innerHTML = `<label for= "tiempo">Tiempo en hs</label><input id="tiempoInput" type="text"> `;
   btnCalcular.innerHTML = `<input id="calcular" type="submit" value="Calcular">`;
   btnInputs.appendChild(distancia);
   btnInputs.appendChild(tiempo);
@@ -86,13 +84,11 @@ objetivoRitmo.onclick = (evt) => {
   const formCalculadora = document.querySelector("#formCalculadora");
   formCalculadora.addEventListener("submit", (evt) => {
     evt.preventDefault();
-    const distanciaValue = document.querySelector(`#distancia`).value;
-    const tiempoValue = document.querySelector(`#tiempo`).value * 60;
-    formCalculadora.reset();
+    const distanciaValue = document.querySelector("#distanciaInput").value;
+    const tiempoValue = document.querySelector("#tiempoInput").value * 60;
 
     // Resultado de los Inputs a Reloj
     const resultado = tiempoValue / distanciaValue;
-    console.log(resultado);
     minutos = Math.floor(resultado);
     segundos = Math.round((resultado - minutos) * 60);
     horas = 0;
@@ -103,6 +99,8 @@ objetivoRitmo.onclick = (evt) => {
     document.querySelector("#horas").value = `${horas}`;
     document.querySelector("#minutos").value = `${minutos}`;
     document.querySelector("#segundos").value = `${segundos}`;
+
+    formCalculadora.reset();
 
     return resultado;
   });
