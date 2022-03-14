@@ -49,6 +49,35 @@
         <legend id="objetivosCalculadora"></legend>
       </div>
     </section>
+    <!-- Zapatillas -->
+    <section id="Zapatillas">
+      <h2 id="tituloZapatillas">Zapatillas</h2>
+      <p class="subZapatillas">
+        Encuentra modelos de zapatillas que se adapten a tu pisada.
+      </p>
+      <form id="formZapatillas">
+        <h3>Tipo de pisada según el arco de la planta del pié</h3>
+
+        <img class="imgPisada" src="./img/pisada.webp" alt="pisada" />
+        <div id="cbPisada">
+          <label for="ponador">Pronador (pie plano)</label>
+          <input type="checkbox" class="cbPisada" name="pronador" />
+          <label for="ponador">Neutro (arco normal)</label>
+          <input type="checkbox" class="cbPisada" name="neutro" />
+          <label for="ponador">Supinador (mucho arco)</label>
+          <input type="checkbox" class="cbPisada" name="supinador" />
+        </div>
+        <div id="ipZapatillas">
+          <label for="peso">Peso</label>
+          <input type="text" id="peso" placeholder="77" />
+          <label for="altura">Altura</label>
+          <input type="text" id="altura" placeholder="184" />
+        </div>
+        <button id="btnZapatillas" type="submit">Buscar zapatillas</button>
+      </form>
+      <ul id="listaZapatillas"></ul>
+    </section>
+
     <!-- Iniciacion -->
     <section id="iniciacion">
       <div id="subIniciacion">

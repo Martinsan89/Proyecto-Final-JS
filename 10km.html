@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.7/glider.min.css" integrity="sha512-YM6sLXVMZqkCspZoZeIPGXrhD9wxlxEF7MzniuvegURqrTGV2xTfqq1v9FJnczH+5OGFl5V78RgHZGaK34ylVg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" type="text/css" href="loading-bar.css"/> -->
     <link rel="stylesheet" href="./planes/10km.css" />
     <title>10km</title>
   </head>
@@ -20,6 +21,7 @@
         
       </p>
     </div>
+    <!-- Slider -->
     <div class="carousel">
       <div class="carousel_contenedor">
         <button aria-label="anterior" class="carousel_anterior" >
@@ -29,7 +31,7 @@
         <div class="carousel_lista">
           <div class="carousel_elemento carga">
             <label for="tecnica-carrera">Técnica de carrera</label>
-           <img src="./img/tecnica-carrera.jpeg" alt="">
+           <img src="./img/tecnica-carrera.jpeg" alt="tecnica de carrera">
             <p>
               La técnica de carrera se trata de todos los movimientos y gestos que intervienen mientras corremos. 
 
@@ -83,19 +85,18 @@
             </p>
             <a href=" https://youtu.be/QPv_dUWbREE" target="blank"> https://youtu.be/QPv_dUWbREE</a> 
           </div>
-         
         </div>
-
-
         <button aria-label="siguiente" class="carousel_siguiente" >
           <i class="fa-solid fa-chevron-right"></i>
         </button>
       </div>
-
       <div role="tablist" class="carousel_indicadores"></div>
-
     </div>
 
+    <!-- Loader -->
+    <div class="loader label-center"></div>
+
+    <!-- Plan de entrenamiento -->
     <section id="tabla-plan">
       <table class="datatable">
         <thead class="semana1">
@@ -455,6 +456,7 @@
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.7.7/glider.min.js" integrity="sha512-tHimK/KZS+o34ZpPNOvb/bTHZb6ocWFXCtdGqAlWYUcz+BGHbNbHMKvEHUyFxgJhQcEO87yg5YqaJvyQgAEEtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/js/all.min.js"></script>
+    <!-- <script type="text/javascript" src="loading-bar.js"></script> -->
     <script src="./planes/10km.js"></script>
   </body>
 </html>

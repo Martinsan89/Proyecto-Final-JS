@@ -1,0 +1,20 @@
+[
+    { "marca" : "Under Armour",
+      "modelo" : "Micro G Assert 6",
+        "peso" : "261g",
+        "drop" : "10mm",
+        "img" : "./zapatillas/supinadorLight/under-armour.jpeg"
+    },
+    { "marca" : "Brooks",
+      "modelo" : "Pureflow 7",
+        "peso" : "252g",
+        "drop" : "8mm",
+        "img" : "./zapatillas/supinadorLight/brooks-pureflow.jpeg"
+    },
+    { "marca" : "New Balance",
+      "modelo" : "Fresh Foam 880 v11",
+        "peso" : "275g",
+        "drop" : "10mm",
+        "img" : "./zapatillas/supinadorLight/new-balance.jpeg"
+    }
+    ]

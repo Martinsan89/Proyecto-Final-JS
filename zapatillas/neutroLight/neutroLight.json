@@ -1,0 +1,20 @@
+[
+    { "marca" : "Reebok",
+      "modelo" : "Floatride Energy 3",
+        "peso" : "241g",
+        "drop" : "9mm",
+        "img" : "./zapatillas/neutroLight/reebok-floatride.jpeg"
+    },
+    { "marca" : "Saucony",
+      "modelo" : "Endorphin Speed 2",
+        "peso" : "227g",
+        "drop" : "8mm",
+        "img" : "./zapatillas/neutroLight/saucony-endorphin.jpeg"
+    },
+    { "marca" : "Under Armour",
+      "modelo" : "Flow Velociti Wind",
+        "peso" : "229g",
+        "drop" : "8mm",
+        "img" : "./zapatillas/neutroLight/under-armour.jpeg"
+    }
+    ]

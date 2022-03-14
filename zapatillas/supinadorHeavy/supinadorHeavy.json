@@ -1,0 +1,20 @@
+[
+    { "marca" : "Asics",
+      "modelo" : "Gel Nimbus 23",
+        "peso" : "309g",
+        "drop" : "10mm",
+        "img" : "./zapatillas/supinadorHeavy/asics-nimbus.jpeg"
+    },
+    { "marca" : "Adidas",
+      "modelo" : "Edge Lux 3",
+        "peso" : "302g",
+        "drop" : "8mm",
+        "img" : "./zapatillas/supinadorHeavy/adidas-edge.jpeg"
+    },
+    { "marca" : "Saucony",
+      "modelo" : "Triumph 18",
+        "peso" : "315g",
+        "drop" : "8mm",
+        "img" : "./zapatillas/supinadorHeavy/saucony-triumph.jpeg"
+    }
+    ]

@@ -1,0 +1,20 @@
+[
+    { "marca" : "Ascis",
+      "modelo" : "Gt 1000 10",
+        "peso" : "281g",
+        "drop" : "9mm",
+        "img" : "./zapatillas/PronadorLight/asics-gt-1000-10.jpeg"
+    },
+    { "marca" : "New Balance",
+      "modelo" : "Fresh Foam 860 v12",
+        "peso" : "278g",
+        "drop" : "8mm",
+        "img" : "./zapatillas/PronadorLight/new-balance-fresh-foam.jpeg"
+    },
+    { "marca" : "Saucony",
+      "modelo" : "Guide 14",
+        "peso" : "298g",
+        "drop" : "8mm",
+        "img" : "./zapatillas/PronadorLight/saucony-guide.jpeg"
+    }
+    ]

@@ -30,3 +30,11 @@ btnPlan.addEventListener("click", (evt) => {
     }
   });
 });
+
+// // Loader
+// var bar = new ldBar(".loader", {
+//   stroke: "#f00",
+//   "stroke-width": 10,
+//   preset: "fan",
+//   value: 65,
+// });

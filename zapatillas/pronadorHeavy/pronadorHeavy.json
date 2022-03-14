@@ -1,0 +1,20 @@
+[
+{ "marca" : "Ascis",
+  "modelo" : "Gel Kayano 28",
+    "peso" : "305g",
+    "drop" : "10mm",
+    "img" : "./zapatillas/PronadorHeavy/asics-gel-kayano-28.jpeg"
+},
+{ "marca" : "Saucony",
+  "modelo" : "Hurricane 23",
+    "peso" : "323g",
+    "drop" : "8mm",
+    "img" : "./zapatillas/PronadorHeavy/saucony-hurricane-23.jpeg"
+},
+{ "marca" : "Mizuno",
+  "modelo" : "Wave Inspire 17",
+    "peso" : "309g",
+    "drop" : "12mm",
+    "img" : "./zapatillas/PronadorHeavy/mizuno-wave-inspire-17.jpeg"
+}
+]

@@ -184,4 +184,114 @@ function objetivo(evt) {
 
 btnIniciacion.addEventListener("click", objetivo);
 
-// incorporar un array
+//Fetch
+// UL
+const listaZapatillas = document.querySelector("#listaZapatillas");
+// Formulario Zapatillas
+const formZapatillas = document.querySelector("#formZapatillas");
+// BTN
+const btnZapatillas = document.querySelector("#btnZapatillas");
+btnZapatillas.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  listaZapatillas.innerHTML = "";
+  // Usuario Heavy o Light
+  const peso = document.querySelector("#peso").value;
+  const altura = document.querySelector("#altura").value;
+  let heavy = altura - peso;
+  // Mostrar Zapatillas
+  const zapatillas = (datos) => {
+    datos.forEach((item) => {
+      const { marca, modelo, peso, drop, img } = item;
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <h3>${marca}</h3>
+        <em> ${modelo}</em>
+        <p>Peso: ${peso}</p>
+        <p>Drop: ${drop}</p>
+        <img src="${img}" alt = "${modelo}">
+      `;
+      listaZapatillas.append(li);
+    });
+  };
+
+  const pisada = document.querySelectorAll(".cbPisada");
+  pisada.forEach((item) => {
+    if (item.checked == true) {
+      let userPisada = item.name;
+      if (userPisada === "pronador" && heavy <= 100) {
+        fetch("./zapatillas/pronadorHeavy/pronadorHeavy.json")
+          .then((respuesta) => {
+            return respuesta.json();
+          })
+          .then((datos) => {
+            zapatillas(datos);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      if (userPisada === "pronador" && heavy > 100) {
+        fetch("./zapatillas/pronadorlight/pronadorLight.json")
+          .then((respuesta) => {
+            return respuesta.json();
+          })
+          .then((datos) => {
+            zapatillas(datos);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      if (userPisada === "neutro" && heavy <= 100) {
+        fetch("./zapatillas/neutroHeavy/neutroHeavy.json")
+          .then((respuesta) => {
+            return respuesta.json();
+          })
+          .then((datos) => {
+            zapatillas(datos);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      if (userPisada === "neutro" && heavy > 100) {
+        fetch("./zapatillas/neutrolight/neutroLight.json")
+          .then((respuesta) => {
+            return respuesta.json();
+          })
+          .then((datos) => {
+            zapatillas(datos);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      if (userPisada === "supinador" && heavy <= 100) {
+        fetch("./zapatillas/supinadorHeavy/supinadorHeavy.json")
+          .then((respuesta) => {
+            return respuesta.json();
+          })
+          .then((datos) => {
+            zapatillas(datos);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      if (userPisada === "supinador" && heavy > 100) {
+        fetch("./zapatillas/supinadorlight/supinadorLight.json")
+          .then((respuesta) => {
+            return respuesta.json();
+          })
+          .then((datos) => {
+            zapatillas(datos);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+
+      formZapatillas.reset();
+    }
+  });
+});

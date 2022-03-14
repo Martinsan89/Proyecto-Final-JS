@@ -1,0 +1,20 @@
+[
+    { "marca" : "Adidas",
+     "modelo" : "Adizero Boston 10",
+        "peso" : "294g",
+        "drop" : "7mm",
+        "img" : "./zapatillas/neutroHeavy/adidas-adizero.jpeg"
+    },
+    { "marca" : "Nike",
+     "modelo" : "React Infinity Run Flyknit 2",
+        "peso" : "302g",
+        "drop" : "7mm",
+        "img" : "./zapatillas/neutroHeavy/nike-react.jpeg"
+    },
+    { "marca" : "Asics",
+      "modelo" : "Gel Cumulus 22",
+        "peso" : "261g",
+        "drop" : "10mm",
+        "img" : "./zapatillas/neutroHeavy/asics-gel.jpeg"
+    }
+    ]
