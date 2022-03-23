@@ -14,6 +14,7 @@ const objetivoTiempo = document.querySelector("#btnTiempo");
 // Evento del btn TIempo
 objetivoTiempo.onclick = () => {
   btnInputs.innerHTML = "";
+
   // Color Verde
   objetivoTiempo.classList.add("validarSi");
   // DOM Inputs Distancia y Ritmo con Create Element/Class Name/InnerHTML/appendchild

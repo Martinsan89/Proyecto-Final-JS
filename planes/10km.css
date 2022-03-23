@@ -15,13 +15,60 @@ body {
   font-size: 1.5rem;
 }
 
+.home {
+  text-decoration: none;
+  color: #281ead;
+  background-color: #eceff4;
+  border-radius: 2rem;
+  padding: 1rem;
+  font-style: oblique;
+}
+
 h1 {
   font-size: 3rem;
   font-style: oblique;
 }
 
+.subPlan {
+  text-align: center;
+  background-color: rgb(9, 82, 77);
+  color: #eceff4;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+.subPlan p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.crfa {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.carga,
+.resistencia,
+.fuerza {
+  color: antiquewhite;
+  width: 40%;
+  margin: auto;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 2rem;
+}
+.ablande {
+  background-color: #047413;
+  color: antiquewhite;
+  width: 40%;
+  margin: auto;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 2rem;
+}
 td {
   padding: 1rem;
+  border-bottom: 1px solid black;
 }
 td input {
   margin: 1rem;
@@ -110,23 +157,26 @@ td input[type="checkbox"] {
 }
 
 .carousel_elemento label {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-style: oblique;
-  background-color: black;
-  color: #7eb3f0;
+  background-color: rgb(9, 82, 77);
+  color: #eceff4;
   border-radius: 2rem;
   padding: 1rem;
 }
 
 .carousel_elemento img {
   margin-top: 2.5rem;
+  height: 15rem;
 }
 
 .carousel_elemento p {
   background-color: black;
-  color: #7eb3f0;
   border-radius: 0.5rem;
-  margin-top: 2rem;
+  margin: 1rem;
+  background-color: rgb(9, 82, 77);
+  color: #eceff4;
+  font-size: 1.5rem;
 }
 .carousel_elemento p:hover {
   transform: scale(1.2, 1.2);
@@ -136,8 +186,59 @@ td input[type="checkbox"] {
   margin-top: 1rem;
   text-decoration: none;
   color: #16c2b3;
+  background-color: #92071e;
 }
 
+/* Loading bar */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.container h3 {
+  margin-bottom: 1rem;
+}
+#progressBar {
+  height: 3rem;
+  width: 80%;
+  background: whitesmoke;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  font-size: 2rem;
+  font-weight: 900;
+}
+#progress {
+  background-color: #047413;
+  width: 0%;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#btnGuardar {
+  width: 40%;
+  border: none;
+  border-radius: 1rem;
+  background-color: #1c6d0b;
+  color: wheat;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  font-weight: 900;
+}
+
+#btnReset {
+  width: 20%;
+  background-color: #92071e;
+  color: whitesmoke;
+  border-radius: 1rem;
+}
+
+/* Plan de Entrenamiento */
 .carga {
   background-color: #281ead;
 }

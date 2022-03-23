@@ -8,19 +8,24 @@
     <title>Proyecto Final JS Martin Sanchez</title>
   </head>
   <body>
-    <div id="titulo">
-      <h1>Plan de entrenamiento para carreras de calle.</h1>
+    <div id="bgImg">
+      <div id="header">
+        <h1>Plan de entrenamiento para carreras de calle</h1>
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="#subCalculadora">Calculadora</a>
+            </li>
+            <li>
+              <a href="#subZapatillas">Zapatillas</a>
+            </li>
+            <li>
+              <a href="#subIniciacion"> Iniciacion al Plan de entrenamiento</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    <nav class="nav">
-      <ul>
-        <li>
-          <a href="#subCalculadora">Calculadora</a>
-        </li>
-        <li>
-          <a href="#subIniciacion"> Iniciacion al Plan de entrenamiento</a>
-        </li>
-      </ul>
-    </nav>
     <!-- Calculadora -->
     <section class="calculadora">
       <div id="subCalculadora">
@@ -51,14 +56,14 @@
     </section>
     <!-- Zapatillas -->
     <section id="Zapatillas">
-      <h2 id="tituloZapatillas">Zapatillas</h2>
+      <h2 id="subZapatillas">Zapatillas</h2>
       <p class="subZapatillas">
         Encuentra modelos de zapatillas que se adapten a tu pisada.
       </p>
       <form id="formZapatillas">
         <h3>Tipo de pisada según el arco de la planta del pié</h3>
 
-        <img class="imgPisada" src="./img/pisada.webp" alt="pisada" />
+        <div class="imgZapatillas"></div>
         <div id="cbPisada">
           <label for="ponador">Pronador (pie plano)</label>
           <input type="checkbox" class="cbPisada" name="pronador" />
@@ -102,6 +107,12 @@
         <button class="btnObjetivo" id="42km">42 km</button>
       </div>
     </section>
+    <div class="linkPlan">
+      <a href="./10km.html">continuar el Plan de entrenamiento</a>
+    </div>
+    <footer class="footer">
+      <h2>Proyecto Final Javascript - Martin Sanchez</h2>
+    </footer>
 
     <script src="./main.js"></script>
   </body>

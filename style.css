@@ -11,42 +11,69 @@ html {
 body {
   background-color: #7eb3f0;
   color: black;
-  margin: 3rem;
-  font-size: 1.5rem;
-}
-
-h1 {
-  margin-bottom: 2rem;
-  font-size: 3rem;
-}
-
-p {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  padding: 2rem 2rem;
+}
+
+#header {
+  position: relative;
+  top: 12rem;
+  z-index: 2;
+}
+h1 {
+  margin: 1rem auto;
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  z-index: 1;
+  color: #7eb3f0;
+  background-color: #1e551e;
+  width: 62%;
+  border-radius: 2rem;
+  padding: 0.5rem;
+}
+
+#bgImg {
+  background-image: url(./img/arco-meta.jpeg);
+  padding: 5rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80% 107%;
+  height: 50rem;
+  z-index: -1;
 }
 
 /* Navbar */
 .nav {
-  background-color: rgb(240, 231, 208);
+  display: flex;
+  justify-content: center;
 }
 .nav ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 .nav li {
   display: inline;
+  padding: 0.5rem 1rem;
+  background-color: #1e551e;
+  border-radius: 2.5rem;
+  font-size: 1.5rem;
 }
 .nav a {
   text-decoration: none;
-  color: #043604;
-  background-color: rgb(231, 150, 167);
+  color: #7eb3f0;
+  font-size: 1.5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-/* ------------------------------------------- */
-/* Calculadora */
+.nav a:hover {
+  opacity: 50%;
+}
+
+/* --------------------Calculadora-------------------- */
 .calculadora {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 #tiempo-ritmo {
@@ -69,6 +96,7 @@ p {
 }
 
 button {
+  margin-top: 2rem;
   font-size: 1.2rem;
   width: 7rem;
   background: none;
@@ -96,10 +124,12 @@ button {
 .reloj {
   margin-top: 2rem;
 }
-/* ------------------------------------- */
+/* -------------Iniciacion------------------ */
 
 #iniciacion {
   margin-top: 2rem;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 #iniciacion h2 {
   padding-bottom: 1rem;
@@ -131,18 +161,29 @@ button {
   text-decoration: none;
 }
 
-/* Zapatillas */
+/*--------------- Zapatillas ----------------- */
+.imgZapatillas {
+  background-image: url(./img/pisada.webp);
+  padding: 15%;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center top 2rem;
+}
 #Zapatillas {
+  text-align: center;
   margin-top: 2rem;
   padding-bottom: 2rem;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 #Zapatillas h2 {
   margin-top: 2rem;
 }
 #formZapatillas h3 {
+  margin-top: 2rem;
   text-align: center;
+  font-size: 2rem;
 }
 #formZapatillas img {
   width: 90%;
@@ -168,7 +209,6 @@ button {
 
 #formZapatillas button {
   position: relative;
-  left: 46%;
   margin-top: 2rem;
   width: 11rem;
   height: 3rem;
@@ -204,5 +244,27 @@ button {
 #listaZapatillas p {
   font-size: 1.5rem;
   padding: 0.5rem;
-  height: 0rem;
+  height: 2.5rem;
+}
+
+.linkPlan {
+  text-align: center;
+  margin-top: 5rem;
+  background-color: rgb(9, 82, 77);
+}
+.linkPlan a {
+  text-decoration: none;
+
+  color: #eceff4;
+}
+
+/* -----------FOOTER---------- */
+
+.footer {
+  margin-top: 5rem;
+  text-align: center;
+  background-color: burlywood;
+  font-size: 1.5rem;
+  padding: 1.5rem 1.5rem;
+  width: 100%;
 }
