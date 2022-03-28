@@ -54,7 +54,6 @@ btnGuardar.addEventListener("click", (evt) => {
         let chequeado = localStorage.getItem("sesion");
         arrSesion.push(chequeado);
         arrSesion.push(sesion);
-        // arrSesion.join(", ");
         localStorage.setItem("sesion", arrSesion);
       }
     }

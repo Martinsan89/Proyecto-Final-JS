@@ -42,17 +42,6 @@ h1 {
   margin-bottom: 2rem;
 }
 
-/* Plan de Entrenamiento */
-.carga {
-  background-color: #281ead;
-}
-.resistencia {
-  background-color: #aa9901;
-}
-.fuerza {
-  background-color: #92071e;
-}
-
 .crfa {
   text-align: center;
   font-size: 2rem;
@@ -264,4 +253,15 @@ td input[type="checkbox"] {
 .semana8 {
   background-color: #047413;
   color: white;
+}
+
+/* Plan de Entrenamiento */
+.carga {
+  background-color: #281ead;
+}
+.resistencia {
+  background-color: #aa9901;
+}
+.fuerza {
+  background-color: #92071e;
 }
