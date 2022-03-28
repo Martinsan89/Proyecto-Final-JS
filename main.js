@@ -7,14 +7,19 @@ let horas = 0,
 const btnInputs = document.querySelector("#btnInputs");
 // DOM Btn Calcular (para poder usarlos en ambos btns)
 const btnCalcular = document.createElement("div");
+const btnReset = document.createElement("div");
 
-// Proceso Btn Tiempo
+// Variable btn Ritmo
+const objetivoRitmo = document.querySelector("#btnRitmo");
 // Variable btn Tiempo
 const objetivoTiempo = document.querySelector("#btnTiempo");
-// Evento del btn TIempo
+
+// Proceso Btn Tiempo
 objetivoTiempo.onclick = () => {
   btnInputs.innerHTML = "";
-
+  // Remover verde del otro btn
+  objetivoRitmo.classList.contains("validarSi") &&
+    objetivoRitmo.classList.remove("validarSi");
   // Color Verde
   objetivoTiempo.classList.add("validarSi");
   // DOM Inputs Distancia y Ritmo con Create Element/Class Name/InnerHTML/appendchild
@@ -23,12 +28,15 @@ objetivoTiempo.onclick = () => {
   distancia.className = "distancia";
   ritmo.className = "ritmo";
   btnCalcular.className = "btnCalcular";
+  // btnReset.className = "btnReset";
   distancia.innerHTML = `<label for= "distancia">Distancia en Km</label><input id="distanciaInput" type="text">`;
   ritmo.innerHTML = `<label for= "ritmo">Ritmo min/km</label> <input id="ritmoInput" type="text"> `;
   btnCalcular.innerHTML = `<input type="submit" value="Calcular">`;
+  btnReset.innerHTML = `<button type="button" id="btnReset">Reset</button>`;
   btnInputs.appendChild(distancia);
   btnInputs.appendChild(ritmo);
   btnInputs.appendChild(btnCalcular);
+  btnInputs.appendChild(btnReset);
 
   //Calculadora de los Inputs
   const formCalculadora = document.querySelector("#formCalculadora");
@@ -57,14 +65,20 @@ objetivoTiempo.onclick = () => {
       return resultado;
     }
   });
+  const reset = document.querySelector("#btnReset");
+  reset.addEventListener("click", (evt) => {
+    evt.preventDefault();
+    location.reload();
+  });
 };
 
 // Proceso Btn Ritmo
 
-// Variable btn Ritmo
-const objetivoRitmo = document.querySelector("#btnRitmo");
 objetivoRitmo.onclick = () => {
   btnInputs.innerHTML = "";
+  // Remover verde del otro btn
+  objetivoTiempo.classList.contains("validarSi") &&
+    objetivoTiempo.classList.remove("validarSi");
   // Color Verde
   objetivoRitmo.classList.add("validarSi");
   // DOM Inputs Distancia y Ritmo con Create Element/Class Name/InnerHTML/appendchild
@@ -77,9 +91,11 @@ objetivoRitmo.onclick = () => {
   <input id="distanciaInput" type="text">`;
   tiempo.innerHTML = `<label for= "tiempo">Tiempo en hs</label><input id="tiempoInput" type="text"> `;
   btnCalcular.innerHTML = `<input id="calcular" type="submit" value="Calcular">`;
+  btnReset.innerHTML = `<button type="button" id="btnReset">Reset</button>`;
   btnInputs.appendChild(distancia);
   btnInputs.appendChild(tiempo);
   btnInputs.appendChild(btnCalcular);
+  btnInputs.appendChild(btnReset);
 
   //Calculadora de los Inputs
   const formCalculadora = document.querySelector("#formCalculadora");
@@ -104,6 +120,11 @@ objetivoRitmo.onclick = () => {
     formCalculadora.reset();
 
     return resultado;
+  });
+  const reset = document.querySelector("#btnReset");
+  reset.addEventListener("click", (evt) => {
+    evt.preventDefault();
+    location.reload();
   });
 };
 // Usuario
@@ -185,7 +206,7 @@ function objetivo(evt) {
 
 btnIniciacion.addEventListener("click", objetivo);
 
-//Fetch
+//Fetch Zapatillas
 // UL
 const listaZapatillas = document.querySelector("#listaZapatillas");
 // Formulario Zapatillas

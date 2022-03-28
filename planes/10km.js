@@ -70,7 +70,7 @@ btnGuardar.addEventListener("click", (evt) => {
   const result = parseFloat(mapChecks.length * 3.5);
   cargar(result);
   function cargar() {
-    if (result < 100) {
+    if (result < 105) {
       progress.style.width = result + "%";
       progress.innerHTML = result + "%";
     }
